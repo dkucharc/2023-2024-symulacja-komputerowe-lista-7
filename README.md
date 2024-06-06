@@ -2,28 +2,21 @@
 
 Wydział Matematyki, Semestr Letni 2023/2024
 
-**Laboratorium 6:** Niejednorodny proces Poissona
+**Laboratorium 7:** Złożony process Poissona
 
-**Termin oddania:** 16/05/2024 godz. 23:59:59 CET.
+**Termin oddania:** 12/06/2024 godz. 23:59:59 CET.
 
 ---
 
-**Zadanie 1.** Metoda przerzedzania 
-> Napisz algorytm, który dla ustalonej niejednorodnej funkcji intensywności $\lambda(t)$ generuje czasy oczekiwania niejednorodnego procesu Poissona metodą przerzedzania.
-> - Sprawdź poprawność jego działania weryfikując, że $N_t \sim Poiss(\int_{0}^{t}\lambda{(s)}\mbox{ds})$
+**Zadanie 1.** Funkcja charakterystyczna
+> Zaimplementuj próbkowy estymator funkcji charakterystycznej i wypróbuj na typowych rozkładach.
 
-**Zadanie 2.** Metoda odwrotnej dystrybuanty
-> Dla przypadków, w których możemy łatwo wyznaczać $m(t) =\int_{0}^{t}\lambda{(s)}\mbox{ds}$ można użyć alternatywnego algorytmu.
-> 1. Dla ustalonego $T$ wygenerować zmienną $N_t \sim Poiss(m(T))$.
-> 1. Za czasy oczekiwania wziąć $N_t$ posortowanych zmiennych o dystrybuancie $F(t) = m(t)/m(T)$.
-> - Sprawdź również jego działanie.
+**Zadanie 2.** Złożony proces Poissona
+> W oparciu o definicję zaimplementuj symulowanie złożonego procesu Poisson'a dla skoków z rozkładu $\mathcal{N}\sim(0,1)$ oraz $\mathcal{C}(0, 1)$.
+> - Stwórz wykresy trajektorii oraz zweryfikuj poprawność symulacji korzystając ze znajomości funkcji charakterystycznej procesu.
 
-**Zadanie 3.** Łączenie procesów Poissona
-> Mając 2 niezależne niejednorodne procesy Poissona stwórz proces składający się z połączenia wszystkich zdarzeń obu.
-> - Sprawdź, że jego intensywność jest sumą 2 oryginalnych intensywności.
-
-**Zadanie 4.** Rozłączenie procesów Poissona
-> Znacznikowanym procesem Poissona nazywamy proces Poissona, w którym każdy jego czas zdarzenia $S_i$ ma dołączony znacznik (etykietę) $Z_i$, które są niezależnymi zmiennymi losowymi.
-> - Sprawdź, że dla znaczników $Z_i \in \{1, 2,\ldots, N\}$ zadanych rozkładem $P(Z_i = k) = p_k(S_i)$ znaniczkowane procesy otrzymane wybieraniem $S_i = k$ to niezależne niejednorodne procesy Poissona o intensywnościach $p_k(t)λ$.
+**Zadanie 3.** Proces ryzyka
+> Zaimplementuj generację procesu ryzyka dla szkód z $Exp(1)$ przybywających z intensywnością $1$, dryfem (przychodami) $\frac{1}{2}$ oraz kapitałem początkowym $5$.
+> Sprawdź prawdopodobieństwo niewypłacalności w czasach $1$, $3$, $5$.
 
 **Uwaga**: Rozwiązania poszczególnych zadań należy umieścić w dedykowanych plikach `*.py` lub `*.ipynb` o nazwach `zadanie_1.[py|ipynb]`, `zadanie_2.[py|ipynb]` i `zadanie_3.[py|ipynb]`, itd.
